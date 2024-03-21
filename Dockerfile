@@ -28,3 +28,5 @@ RUN \
   cd ../../; \
   \
   rm -rf firmware tmp;
+
+WORKDIR /openwrt
