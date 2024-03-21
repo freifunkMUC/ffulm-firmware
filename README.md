@@ -25,7 +25,9 @@ In the folder which contains the Dockerfile do the following:
 
   # 2) Run image
   mkdir /tmp/ffulm-build
-  docker run --rm -it -v ./ffulm-build3:/openwrt/bin/targets ffulm
+  docker run --rm -it -v /tmp/ffulm-build:/openwrt/bin/targets ffulm
+
+
 
   # 3) Start build process
   cd /openwrt
