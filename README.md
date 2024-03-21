@@ -28,9 +28,7 @@ In the folder which contains the Dockerfile do the following:
   docker run --rm -it -v /tmp/ffulm-build:/openwrt/bin/targets ffulm
 
 
-
   # 3) Start build process
-  cd /openwrt
   make menuconfig
   ## do the changes necessary
   make -j15
