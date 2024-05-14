@@ -166,7 +166,7 @@ autoupdate() {
     fi
     echo "Upgrading firmware."
     [ $force -eq 0 ] && sleep $APPLY_DELAY
-    sysupgrade "${fw_image}"
+    sysupgrade -f "${fw_image}"
   else
     echo "No new firmware available" >&2
   fi
