@@ -630,6 +630,12 @@ update_230_to_231() {
 	cp /rom/etc/uhttpd.key /etc/ 2> /dev/null
 }
 
+update_231_to_232() {
+	# Preserve self signed certificates
+	cp /rom/etc/uhttpd.crt /etc/ 2> /dev/null
+	cp /rom/etc/uhttpd.key /etc/ 2> /dev/null
+}
+
 start()
 {
 	echo "(I) Start freifunk_setup"
@@ -665,6 +671,7 @@ start()
 			update_210_to_220
 			update_220_to_230
 			update_230_to_231
+			update_231_to_232
 			update_version
 			;;
 		0.5.1*)
@@ -681,6 +688,7 @@ start()
 			update_210_to_220
 			update_220_to_230
 			update_230_to_231
+			update_231_to_232
 			update_version
 			;;
 		0.6.0*)
@@ -696,6 +704,7 @@ start()
 			update_210_to_220
 			update_220_to_230
 			update_230_to_231
+			update_231_to_232
 			update_version
 			;;
 		0.6.1*)
@@ -710,6 +719,7 @@ start()
 			update_210_to_220
 			update_220_to_230
 			update_230_to_231
+			update_231_to_232
 			update_version
 			;;
 		0.6.2*)
@@ -723,6 +733,7 @@ start()
 			update_210_to_220
 			update_220_to_230
 			update_230_to_231
+			update_231_to_232
 			update_version
 			;;
 		0.6.3*)
@@ -735,6 +746,7 @@ start()
 			update_210_to_220
 			update_220_to_230
 			update_230_to_231
+			update_231_to_232
 			update_version
 			;;
 		0.6.4*)
@@ -746,6 +758,7 @@ start()
 			update_210_to_220
 			update_220_to_230
 			update_230_to_231
+			update_231_to_232
 			update_version
 			;;
 		0.6.5*)
@@ -756,6 +769,7 @@ start()
 			update_210_to_220
 			update_220_to_230
 			update_230_to_231
+			update_231_to_232
 			update_version
 			;;
 		1.0.0*)
@@ -765,6 +779,7 @@ start()
 			update_210_to_220
 			update_220_to_230
 			update_230_to_231
+			update_231_to_232
 			update_version
 			;;
 		2.0.0*)
@@ -773,6 +788,7 @@ start()
 			update_210_to_220
 			update_220_to_230
 			update_230_to_231
+			update_231_to_232
 			update_version
 			;;
 		2.1.0*)
@@ -780,18 +796,27 @@ start()
 			update_210_to_220
 			update_220_to_230
 			update_230_to_231
+			update_231_to_232
 			update_version
 			;;
 		2.2.0*)
 			echo "(I) Apply update."
 			update_220_to_230
 			update_230_to_231
+			update_231_to_232
 			update_version
 			;;
 
 		2.3.0*)
 			echo "(I) Apply update."
 			update_230_to_231
+			update_231_to_232
+			update_version
+			;;
+
+		2.3.1*)
+			echo "(I) Apply update."
+			update_231_to_232
 			update_version
 			;;
 
