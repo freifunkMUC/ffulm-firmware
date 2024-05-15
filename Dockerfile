@@ -11,7 +11,7 @@ RUN \
   cd openwrt; \
   git reset --hard 6fc02f2a45e151ce16677d6131251af86ab4fc06; \
   \
-  git clone -b v2.3.3 https://github.com/t0biii/firmware.git; \
+  git clone -b v2.3.2 https://github.com/freifunkMUC/ffulm-firmware.git; \
   cp -rf firmware/files firmware/package firmware/feeds.conf .; \
   \
   ./scripts/feeds update -a; \
